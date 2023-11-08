@@ -1,0 +1,125 @@
+/* ana ozellikleri tanimlama ve özellikleri sifirlama */
+
+body {
+    --color--primary: rgba(255, 0, 0, 0.30); /* Şeffaflık (0.92) burada ayarlanıyor */
+    --color--primary-dark: #ccbe04;
+    --color-secondary: rgba(220, 160, 146, 0.5); /* Tamamen opak */
+    --color-error: rgb(224, 82, 82); /* Tamamen opak */
+    --color-success: rgba(220, 100, 0, 0.925);
+    --color-main: rgb(0, 255, 255);
+
+    --border-radius: 5px;
+
+    background: linear-gradient(to right, var(--color--primary), var(--color--primary-dark)), url(bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+
+    margin: 0;
+    padding: 0;
+
+    height: 100vh;
+    font-size: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ana taşiyici alani */
+
+.container{
+    width: 400px;
+    max-height: 400px;
+    padding: 2rem;
+    margin: 1rem;
+
+}
+
+/* form alani */
+
+.form{
+    text-align: center;
+    margin-bottom: 1rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 1);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+}
+
+.form_title{
+    margin-bottom: 1rem;
+    margin-top: 0rem;
+}
+
+.form__message--error{
+    color: var(--color-error);
+}
+
+.form__input--group{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.form__input-error-message{
+    color: var(--color-error);
+    font-size: 0.8rem;
+    text-align: left;
+    margin-top: 0.5rem;
+}
+
+.form__input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.7rem;
+    border-radius: var(--border-radius);
+    outline: none;
+    border: 2px solid #ddd;
+    background-color: #eee;
+    transition: background 0.36, border-color 0.3s;
+    text-align: left;
+}
+
+.form__input:focus{
+    border-color: var(--color-main);
+    background-color: white;
+}
+
+.form__button{
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: var(--color-main);
+    border-radius: var(--border-radius);
+}
+
+.form__button:hover{
+    background-color:var(--color-success);
+}
+
+.form_button:active{
+    transform: scale(0.98);
+}
+
+.form__link{
+    color: var(--color--primary-dark);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form__link:hover{
+    color: var(--color-success);
+}
+
+.form__text{
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+}
+
+.form__text_for_all{
+    margin: 10px;
+}
